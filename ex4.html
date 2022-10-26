@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex4</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      h2 {
+        margin-left: 1em;
+        font-weight: 900;
+      }
+      #page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* height: 100vh; */
+        width: 100vw;
+        flex-grow: 1;
+      }
+      #main {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-basis: auto;
+        height: 20vh;
+        width: 100vw;
+      }
+
+      #footer {
+        background-color: black;
+        color: aliceblue;
+        flex-basis: 20%;
+        flex-grow: 1;
+        min-height: 10vh;
+      }
+      #header {
+        background-color: black;
+        color: aliceblue;
+        flex-basis: 20%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        min-height: 20%;
+      }
+      #article {
+        background-color: aliceblue;
+        color: black;
+        flex-basis: 70%;
+      }
+      #aside {
+        background-color: blueviolet;
+        color: aliceblue;
+        flex-basis: 30%;
+      }
+      #nav {
+        background-color: deeppink;
+        color: white;
+        flex-basis: 30%;
+      }
+      #noarticle {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 100%;
+        flex-grow: 1;
+        height: 80vh;
+      }
+      #noaside {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 80%;
+        flex-grow: 1;
+        /* height: 100vh; */
+      }
+
+      @media only screen and (max-width: 600px) {
+        #noarticle {
+          display: flex;
+          flex-direction: column;
+          flex-basis: 100%;
+          flex-grow: 1;
+          height: 80vh;
+        }
+        #nav {
+          flex-basis: 10%;
+        }
+        #footer {
+          flex-flow: 20%;
+        }
+      }
+
+      @media only screen and (max-width: 300px) {
+        #noarticle {
+          display: flex;
+          flex-direction: column;
+          flex-basis: 50%;
+          flex-grow: 1;
+          height: 80vh;
+        }
+        #noaside {
+          display: flex;
+          flex-direction: column;
+          flex-basis: 50%;
+          flex-grow: 1;
+          /* height: 100vh; */
+        }
+        #nav {
+          flex-basis: 10%;
+        }
+        #aside {
+          flex-basis: 15%;
+        }
+        #footer {
+          flex-flow: 20%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page">
+      <div id="header">
+        <div id="main">
+          <h2>Header</h2>
+        </div>
+        <div id="noarticle">
+          <div id="nav">
+            <h2>Nav</h2>
+          </div>
+          <div id="noaside">
+            <div id="article">
+              <h2>Article</h2>
+            </div>
+            <div id="aside">
+              <h2>Aside</h2>
+            </div>
+          </div>
+        </div>
+        <div id="footer"><h2>Footer</h2></div>
+      </div>
+    </div>
+  </body>
+</html>
